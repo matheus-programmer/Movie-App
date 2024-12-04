@@ -8,6 +8,11 @@ def main(page:ft.Page):
     page.padding = 0
     page.horizontal_alignment = 'center'
 
+    def comecar_btn(e):
+        from login import login_page
+        page.clean()
+        page.add(login_page(page))
+
     # Imagem main
     _main_img = ft.Container(
         alignment=ft.alignment.center,
@@ -63,6 +68,7 @@ def main(page:ft.Page):
                         color='white',
                         width='250',
                         height='50',
+                        on_click=comecar_btn,
                     )
                 )
             ]
